@@ -252,6 +252,15 @@ function renderPage(p) {
   return `<!DOCTYPE html>
 <html lang="de">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BJTG5KVPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6BJTG5KVPS');
+</script>
 ${headCommon({ metaTitle: p.metaTitle, metaDescription: p.metaDescription, slug: p.slug + '.html', schema })}
 </head>
 <body>

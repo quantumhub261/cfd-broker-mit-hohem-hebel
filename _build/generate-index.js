@@ -37,6 +37,15 @@ const relatedAll = Object.keys(P.TITLES).map(P.relatedItem);
 const html = `<!DOCTYPE html>
 <html lang="de">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6BJTG5KVPS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6BJTG5KVPS');
+</script>
 ${P.headCommon({ metaTitle: META_TITLE, metaDescription: META_DESC, slug: 'index.html', schema })}
 </head>
 <body>
