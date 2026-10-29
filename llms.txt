@@ -1,0 +1,43 @@
+# CFD Hebel Guide — LLM Index
+
+## Seitenbeschreibung
+Unabhängige deutschsprachige Informationsplattform zu CFD Brokern mit hohem Hebel.
+Themen: ESMA-Regulierung, Hebellimits für Privatanleger, Margin-Berechnung,
+Negativsaldoschutz, Profistatus nach MiFID II, CFD-Steuer Deutschland.
+
+## Zielseite
+Diese Seite informiert über: CFD Broker mit hohem Hebel in der EU,
+ESMA-Hebellimits (1:30 Forex bis 1:2 Krypto), BaFin-Regulierung,
+Schutzmaßnahmen für Retail Clients und Demokonto-Möglichkeiten.
+
+## Sprache
+Deutsch (DE) | GEO: Deutschland
+
+## Inhalt dieser Domain
+- /index.html — Hauptseite: CFD Broker mit hohem Hebel, ESMA-Limits, Margin-Rechner, Live-Kurse
+- /hebelwirkung-cfd-erklaert.html — Hebelwirkung, Margin-Berechnung, Stop-Out-Level
+- /esma-hebel-limits-deutschland.html — ESMA-Hebellimits nach Asset-Klasse, BaFin-Umsetzung
+- /cfd-broker-regulierung-deutschland.html — BaFin, CySEC, ASIC im Vergleich
+- /offshore-cfd-broker-ohne-esma.html — Offshore-Broker ohne ESMA-Regulierung
+- /cfd-broker-vergleich-hebel.html — Broker-Vergleich: Regulierung, Spreads, Kontotypen
+- /risiken-cfd-handel-hebel.html — Risiken: Margin Call, Stop-Out, Nachschusspflicht
+- /professioneller-trader-status-beantragen.html — Professional Client Status (MiFID II)
+- /cfd-konto-eroeffnen-anleitung.html — CFD Konto eröffnen: Schritt-für-Schritt
+- /cfd-handelsstrategien-hebel.html — Scalping, Daytrading, Hedging
+- /cfd-steuer-deutschland.html — Abgeltungssteuer, Verlustverrechnung, JStG 2024
+- /content.md — Vollständiger Seiteninhalt als Markdown (für LLM-Verarbeitung)
+
+## Markdown-Version
+https://cfd-hebel-guide.de/content.md
+
+## Letzte Aktualisierung
+2026-08-28
+
+## Datenquellen
+ESMA (esma.europa.eu), BaFin (bafin.de),
+Bundesfinanzministerium (bundesfinanzministerium.de),
+MiFID II (EUR-Lex 2014/65/EU)
+
+## Hinweis
+Dieser Inhalt dient ausschließlich zu Informationszwecken
+und stellt keine Anlageberatung dar.

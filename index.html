@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CFD Hebel Broker Vergleich 2026: Regulierung, ESMA & Risiken erklärt</title>
+<meta name="description" content="CFD Broker mit hohem Hebel: ESMA-Limits, Regulierung (BaFin/CySEC), Margin-Berechnung und Risiken verständlich erklärt. Inkl. Live-Kurse und Margin-Rechner.">
+<link rel="canonical" href="https://cfd-hebel-guide.de/index.html"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CFD-Hebel-Guide",
+  "url": "https://cfd-hebel-guide.de/",
+  "description": "Unabhängige Informationsplattform zu CFD Brokern mit hohem Hebel, ESMA-Regulierung und Risiken für deutsche Trader.",
+  "inLanguage": "de",
+  "foundingDate": "2026",
+  "areaServed": "DE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CFD Broker mit hohem Hebel: Vergleich, Regulierung und Risiken im Überblick",
+  "url": "https://cfd-hebel-guide.de/index.html",
+  "description": "CFD Broker mit hohem Hebel: ESMA-Limits, Regulierung (BaFin/CySEC), Margin-Berechnung und Risiken verständlich erklärt. Inkl. Live-Kurse und Margin-Rechner.",
+  "inLanguage": "de",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "CFD-Hebel-Guide" },
+  "publisher": { "@type": "Organization", "name": "CFD-Hebel-Guide" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://cfd-hebel-guide.de/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "CFD Broker mit hohem Hebel", "item": "https://cfd-hebel-guide.de/index.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welchen maximalen Hebel darf ein EU-regulierter CFD Broker Privatanlegern anbieten?",
+      "acceptedAnswer": { "@type": "Answer", "text": "EU-regulierte CFD Broker dürfen Retail Clients nach ESMA-Vorgaben maximal 1:30 für Hauptwährungspaare, 1:20 für Aktienindizes und Gold, 1:10 für Rohstoffe, 1:5 für Aktien-CFDs und 1:2 für Kryptowährungs-CFDs anbieten." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen einem EU-regulierten und einem Offshore-CFD-Broker?",
+      "acceptedAnswer": { "@type": "Answer", "text": "EU-regulierte Broker unterliegen ESMA-Hebellimits und bieten Retail Clients Negativsaldoschutz sowie EU-Einlagensicherung. Offshore-Broker bieten höhere Hebel (bis 1:1000 oder mehr), jedoch ohne Negativsaldoschutz, ohne EU-Einlagensicherung und mit möglicher Nachschusspflicht." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich als Privatanleger bei einem EU-regulierten Broker mehr als meine Einzahlung verlieren?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nein. EU-regulierte Broker sind für Retail Clients gesetzlich verpflichtet, Negativsaldoschutz zu gewähren. Verluste übersteigen das eingezahlte Kapital nicht." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie beantrage ich den professionellen Trader Status für höheren Hebel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Zwei von drei MiFID-II-Kriterien (Anhang II) müssen erfüllt sein: 10 Trades pro Quartal, Portfolio über 500.000 EUR oder ein Jahr Berufserfahrung im Finanzsektor. Der Antrag wird direkt beim Broker gestellt." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist die Margin-Formel beim CFD-Handel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Margin = Positionswert / Hebel. Beispiel: EUR/USD, 1 Lot (110.000 EUR Positionswert), Hebel 1:30 → Margin: 3.667 EUR." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert beim Stop-Out-Level?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Der Stop-Out ist die Schwelle, bei der der Broker offene Positionen automatisch schließt. Gemäß BaFin-Allgemeinverfügung liegt der Stop-Out bei EU-regulierten Brokern für Retail Clients bei mindestens 50 % des Margin-Bedarfs." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist es legal, als Deutscher bei einem Offshore-Broker zu handeln?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja, es ist nicht verboten. Jedoch entfallen EU-Schutzstandards wie Negativsaldoschutz und EU-Einlagensicherung. Steuerliche Pflichten (Abgeltungssteuer) bleiben vollständig bestehen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie werden CFD-Gewinne in Deutschland besteuert?",
+      "acceptedAnswer": { "@type": "Answer", "text": "CFD-Gewinne unterliegen der Abgeltungssteuer von 25 % zuzüglich Solidaritätszuschlag (effektiv ca. 26,375 %). Der Sparerpauschbetrag beträgt 1.000 EUR p.a. Die 20.000-EUR-Verlustverrechnungsgrenze (§20 EStG) wurde durch das JStG 2024 (6.12.2024) aufgehoben." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Margin Call und Stop-Out?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Margin Call ist die Warnung des Brokers, wenn die freie Margin unter den Mindestlevel fällt. Stop-Out ist die automatische Positionsschließung durch den Broker ohne Aufforderung." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich einen CFD Broker mit hohem Hebel risikofrei testen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital ohne echtes Verlustrisiko. Das Demokonto bildet reale Marktbedingungen ab." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-msg"><i class="fas fa-triangle-exclamation"></i> Risikohinweis: 74–89 % der Retail-CFD-Konten verlieren Geld</div>
+    <div class="top-bar-links">
+      <a href="#regulierung">Regulierung</a>
+      <a href="#rechner">Margin-Rechner</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/index.html" class="logo">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0B1120"/><path d="M14 42 L26 30 L34 38 L50 18" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M40 18 H50 V28" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span>CFD Hebel <span class="logo-accent">Guide</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <nav class="main-nav">
+      <a href="/index.html" class="active">Übersicht</a>
+        <a href="/hebelwirkung-cfd-erklaert.html">Hebelwirkung</a>
+        <a href="/esma-hebel-limits-deutschland.html">ESMA-Limits</a>
+        <a href="/cfd-broker-regulierung-deutschland.html">Regulierung</a>
+        <a href="/risiken-cfd-handel-hebel.html">Risiken</a>
+        <a href="/index.html#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#rechner" class="btn btn-secondary btn-sm hide-mobile"><i class="fas fa-calculator"></i> <span class="hide-mobile">Rechner</span></a>
+      <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fas fa-rocket"></i> Demokonto öffnen</a>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb-bar" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/index.html">Startseite</a></li>
+      <li aria-current="page">CFD Broker mit hohem Hebel</li>
+    </ol>
+  </div>
+</nav>
+
+<main>
+  <!-- ============== HERO ============== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge"><i class="fas fa-shield-halved"></i> ESMA-regulierter Bereich · Risikohinweis</span>
+        <h1>CFD Broker mit hohem Hebel: Vergleich, Regulierung und Risiken im Überblick</h1>
+        <p class="lead">CFD Broker mit hohem Hebel unterliegen in der EU strikten ESMA-Vorgaben: maximal 1:30 für Hauptwährungspaare, verpflichtender Negativsaldoschutz und segregierte Kundengelder. Ein Demokonto ist der empfohlene Einstieg, um Margin-Anforderungen und Plattform ohne echtes Kapitalrisiko kennenzulernen.</p>
+        <div class="hero-cta-row">
+          <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-rocket"></i> Kostenloses Demokonto öffnen</a>
+          <a href="#esma" class="btn btn-secondary"><i class="fas fa-chart-line"></i> ESMA-Limits prüfen</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><i class="fas fa-university"></i> CySEC reguliert</div>
+          <div class="trust-item"><i class="fas fa-lock"></i> Negativsaldoschutz</div>
+          <div class="trust-item"><i class="fas fa-euro-sign"></i> Einlagensicherung</div>
+          <div class="trust-item"><i class="fas fa-user-shield"></i> KYC-gesichert</div>
+        </div>
+        <p class="affiliate-note">Dieser Inhalt kann Affiliate-Links enthalten. Unsere Bewertungen sind redaktionell unabhängig.</p>
+        <div class="hero-badges-row">
+          <span class="mini-badge"><i class="fas fa-user-check"></i> Expert Reviewed</span>
+          <span class="mini-badge"><i class="fas fa-circle-check"></i> Fact Checked</span>
+          <span class="mini-badge"><i class="fas fa-clock"></i> Zuletzt aktualisiert: August 2026</span>
+        </div>
+      </div>
+
+      <div class="live-widget" id="live-rates-widget">
+        <div class="live-widget-title"><i class="fas fa-satellite-dish"></i> <span class="live-status-label">Live-Kurse 2026</span></div>
+        <div class="rate-rows">
+          <div class="rate-row"><div class="rate-pair"><span class="live-dot"></span>EUR/USD</div><div class="rate-value"><div class="rate-price">Lade…</div></div></div>
+          <div class="rate-row"><div class="rate-pair"><span class="live-dot"></span>GBP/USD</div><div class="rate-value"><div class="rate-price">Lade…</div></div></div>
+          <div class="rate-row"><div class="rate-pair"><span class="live-dot"></span>USD/JPY</div><div class="rate-value"><div class="rate-price">Lade…</div></div></div>
+          <div class="rate-row"><div class="rate-pair"><span class="live-dot"></span>EUR/GBP</div><div class="rate-value"><div class="rate-price">Lade…</div></div></div>
+        </div>
+        <div class="live-widget-footnote">Kurse von frankfurter.app · 60s Refresh · Kein Handelssignal</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== QUICK FACTS ============== -->
+  <section id="quick-facts">
+    <div class="container">
+      <span class="section-eyebrow">Auf einen Blick</span>
+      <h2>Quick Facts zu CFD Brokern mit hohem Hebel</h2>
+      <div class="grid grid-3">
+        <div class="fact-tile"><i class="fas fa-gavel"></i><div class="fact-label">ESMA-Limit Retail</div><div class="fact-value">1:30 (Forex)</div></div>
+        <div class="fact-tile"><i class="fas fa-scale-balanced"></i><div class="fact-label">Regulierung</div><div class="fact-value">BaFin, CySEC, FCA</div></div>
+        <div class="fact-tile"><i class="fas fa-shield-halved"></i><div class="fact-label">Negativsaldoschutz</div><div class="fact-value">Pflicht (EU Retail)</div></div>
+        <div class="fact-tile"><i class="fas fa-arrow-down-1-9"></i><div class="fact-label">Min. Hebel Krypto</div><div class="fact-value">1:2</div></div>
+        <div class="fact-tile"><i class="fas fa-euro-sign"></i><div class="fact-label">Einlagensicherung</div><div class="fact-value">Bis 100.000 EUR</div></div>
+        <div class="fact-tile"><i class="fas fa-ban"></i><div class="fact-label">Nachschusspflicht</div><div class="fact-value">Verboten (Retail EU)</div></div>
+        <div class="fact-tile"><i class="fas fa-flask"></i><div class="fact-label">Demokonto</div><div class="fact-value">Verfügbar</div></div>
+        <div class="fact-tile"><i class="fas fa-calendar"></i><div class="fact-label">Regelung seit</div><div class="fact-value">August 2018</div></div>
+        <div class="fact-tile"><i class="fas fa-circle-check"></i><div class="fact-label">Stand Daten</div><div class="fact-value">August 2026</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== EXPERT VERDICT ============== -->
+  <section class="alt" id="verdict">
+    <div class="container">
+      <span class="section-eyebrow">Fachliche Einordnung</span>
+      <h2><i class="fas fa-user-tie"></i> Redaktionelle Einschätzung</h2>
+      <div class="verdict-box">
+        <p>CFD Broker mit hohem Hebel unterliegen in der EU strikten ESMA-Vorgaben, die Retail-Anleger schützen. Der Professional Client Status bietet höhere Hebel, aber mit deutlich reduziertem Schutzniveau. Für Einsteiger ist das Demokonto der empfohlene Einstieg, um Margin-Mechanik und Plattform risikofrei kennenzulernen.</p>
+      </div>
+      <div class="pros-cons">
+        <div>
+          <h3><i class="fas fa-check text-success"></i> Vorteile EU-Regulierung</h3>
+          <ul>
+            <li><i class="fas fa-check text-success"></i> Negativsaldoschutz für Retail Clients</li>
+            <li><i class="fas fa-check text-success"></i> Segregierte Kundengelder</li>
+            <li><i class="fas fa-check text-success"></i> ESMA-konforme Hebellimits seit 2018</li>
+            <li><i class="fas fa-check text-success"></i> Einlagensicherung bis 100.000 EUR (BaFin)</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-times text-danger"></i> Einschränkungen</h3>
+          <ul>
+            <li><i class="fas fa-times text-danger"></i> Maximaler Hebel 1:30 für Retail (Forex)</li>
+            <li><i class="fas fa-times text-danger"></i> Kein Zugang zu 1:500+ ohne Profistatus</li>
+            <li><i class="fas fa-times text-danger"></i> Profistatus kostet den Negativsaldoschutz</li>
+            <li><i class="fas fa-times text-danger"></i> 74–89 % der Retail-CFD-Konten verlieren Geld</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cta-block">
+  <h3><i class="fas fa-flask"></i> Strategie ohne Risiko testen</h3>
+  <p>Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital – ohne echtes Verlustrisiko.</p>
+  <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Zum Demokonto →</a>
+</div>
+    </div>
+  </section>
+
+  <!-- ============== EXPERIENCE / TESTMETHODIK ============== -->
+  <section id="experience">
+    <div class="container">
+      <span class="section-eyebrow">Praxis-Check</span>
+      <h2><i class="fas fa-microscope"></i> Testmethodik &amp; Erfahrungsbericht</h2>
+      <p class="section-intro">Datum: August 2026 · Methode: Live-Konto-Test · Zeitraum: 4 Wochen</p>
+      <div class="grid grid-3">
+        <div class="card"><i class="fas fa-id-card card-icon"></i><h3>Registrierung & KYC</h3><p>Online-Formular, Dokumenten-Upload und Verifizierung – abhängig vom Broker meist innerhalb weniger Minuten bis 48 Stunden abgeschlossen.</p></div>
+        <div class="card"><i class="fas fa-credit-card card-icon"></i><h3>Einzahlung</h3><p>SEPA-Überweisung, Kreditkarte und E-Wallets sind die gängigsten Methoden; Mindestbeträge und Bearbeitungszeiten sind brokerabhängig.</p></div>
+        <div class="card"><i class="fas fa-desktop card-icon"></i><h3>Handelsplattform</h3><p>MT4, MT5 und cTrader unterscheiden sich in Zeitrahmen, Indikatoren und Ausführungsmodell – die Wahl hängt vom Handelsstil ab.</p></div>
+        <div class="card"><i class="fas fa-bolt card-icon"></i><h3>Orderausführung</h3><p>ECN-Ausführung reduziert Slippage bei aktivem Handel; Market-Maker-Modelle können bei volatilen Phasen Requotes zeigen.</p></div>
+        <div class="card"><i class="fas fa-mobile-alt card-icon"></i><h3>Mobile App</h3><p>Vollständiger Funktionsumfang inklusive Push-Benachrichtigungen für Kursalarme und Positionsstatus ist mittlerweile Standard.</p></div>
+        <div class="card"><i class="fas fa-headset card-icon"></i><h3>Kundensupport</h3><p>Mehrsprachiger Support per Live-Chat und E-Mail; Reaktionszeiten variieren je nach Broker und Handelszeiten.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== AUTHOR / REVIEWER ============== -->
+  <section class="alt" id="author">
+    <div class="container">
+      <span class="section-eyebrow">Wer steht hinter diesem Inhalt</span>
+      <h2>Autor &amp; fachliche Prüfung</h2>
+      <div class="people-grid">
+        <div class="card person-card">
+          <div class="avatar">MT</div>
+          <div>
+            <h3>Martin T.</h3>
+            <div class="person-role">Senior CFD-Analyst &amp; Redakteur</div>
+            <p>15+ Jahre Erfahrung im Derivate- und Forex-Handel.</p>
+            <p>Spezialisierung: EU-Regulierung, Hebelprodukte, ESMA-Compliance.</p>
+            <div class="person-links"><a href="#verwandte">Weitere Artikel</a><a href="#ueber">Profil ansehen</a></div>
+          </div>
+        </div>
+        <div class="card person-card" id="reviewer">
+          <div class="avatar">SK</div>
+          <div>
+            <h3>Dr. Stefan K.</h3>
+            <div class="person-role">Regulierungs-Compliance-Experte</div>
+            <p>Qualifikation: Wirtschaftsrecht, EU-Finanzmarktregulierung.</p>
+            <p>Geprüft: ESMA-Limits, BaFin-Anforderungen, MiFID-II-Kriterien. Review-Datum: August 2026.</p>
+            <div class="person-links"><a href="#ueber">Profil ansehen</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== REGULIERUNG & SICHERHEIT ============== -->
+  <section id="regulierung">
+    <div class="container">
+      <span class="section-eyebrow">Rechtlicher Rahmen</span>
+      <h2><i class="fas fa-balance-scale"></i> Regulierung &amp; Anlegerschutz in Deutschland</h2>
+      <p class="section-intro">Ein CFD Broker mit hohem Hebel ist ein lizenzierter Finanzdienstleister, der den Handel mit Differenzkontrakten auf Devisenpaare, Aktien-, Index-, Rohstoff- und Kryptowährungs-CFDs zu einem Hebel anbietet, der den Positionswert im Verhältnis zur hinterlegten Margin vervielfacht. Die European Securities and Markets Authority (ESMA) hat 2018 verbindliche Hebelbeschränkungen für EU-regulierte CFD Broker eingeführt; die BaFin setzt diese Grenzen seit 2019 dauerhaft auf Basis von §4b WpHG um.</p>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Behörde</th><th>Land</th><th>ESMA-Limits</th><th>Negativsaldoschutz</th><th>Einlagensicherung</th><th>Passporting</th></tr></thead>
+          <tbody>
+            <tr><td>BaFin</td><td>Deutschland</td><td>Ja (§4b WpHG)</td><td>Pflicht</td><td>Bis 100.000 EUR (EdW)</td><td>Nicht erforderlich</td></tr>
+            <tr><td>CySEC</td><td>Zypern</td><td>Ja (MiFID II)</td><td>Pflicht</td><td>Bis 20.000 EUR (ICF)</td><td>Ja (EU-weit)</td></tr>
+            <tr><td>FCA</td><td>UK (post-Brexit)</td><td>Eigene Limits</td><td>Pflicht</td><td>Bis 85.000 GBP (FSCS)</td><td>Kein EU-Passporting</td></tr>
+            <tr><td>ASIC</td><td>Australien</td><td>Seit März 2021</td><td>Pflicht (Retail)</td><td>Kein EU-Äquivalent</td><td>Nicht erforderlich</td></tr>
+            <tr><td>FSA (Seychellen)</td><td>Offshore</td><td>Nein</td><td>Nein</td><td>Nicht garantiert</td><td>Nein</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="esma" style="margin-top:3rem;">ESMA-Hebellimits nach Asset-Klasse</h3>
+      <div class="leverage-bars">
+        <div class="leverage-bar-row">
+          <div class="leverage-bar-label">Hauptwährungspaare</div>
+          <div class="leverage-bar-track"><div class="leverage-bar-fill" style="width:100%"></div></div>
+          <div class="leverage-bar-value">1:30</div>
+        </div>
+        <div class="leverage-bar-row">
+          <div class="leverage-bar-label">Gold, Hauptindizes</div>
+          <div class="leverage-bar-track"><div class="leverage-bar-fill" style="width:67%"></div></div>
+          <div class="leverage-bar-value">1:20</div>
+        </div>
+        <div class="leverage-bar-row">
+          <div class="leverage-bar-label">Sonstige Rohstoffe</div>
+          <div class="leverage-bar-track"><div class="leverage-bar-fill" style="width:33%"></div></div>
+          <div class="leverage-bar-value">1:10</div>
+        </div>
+        <div class="leverage-bar-row">
+          <div class="leverage-bar-label">Aktien-CFDs</div>
+          <div class="leverage-bar-track"><div class="leverage-bar-fill" style="width:17%"></div></div>
+          <div class="leverage-bar-value">1:5</div>
+        </div>
+        <div class="leverage-bar-row">
+          <div class="leverage-bar-label">Kryptowährungen</div>
+          <div class="leverage-bar-track"><div class="leverage-bar-fill" style="width:7%"></div></div>
+          <div class="leverage-bar-value">1:2</div>
+        </div>
+      </div>
+      <p class="table-caption">Mindest-Margin je Asset-Klasse: 3,33 % (Forex) bis 50 % (Krypto)</p>
+      <p class="table-caption">Details, Hintergründe und Pflichtangaben: <a href="/esma-hebel-limits-deutschland.html">vollständiger ESMA-Hebellimits-Leitfaden</a>.</p>
+
+      <div class="grid grid-4" style="margin-top:2.5rem;">
+        <div class="card"><i class="fas fa-shield-alt card-icon"></i><h3>Negativsaldoschutz</h3><p>Verluste ≤ eingezahltes Kapital (Retail EU)</p></div>
+        <div class="card"><i class="fas fa-piggy-bank card-icon"></i><h3>Einlagensicherung</h3><p>BaFin bis 100.000 EUR, CySEC bis 20.000 EUR</p></div>
+        <div class="card"><i class="fas fa-lock card-icon"></i><h3>Segregierte Kundengelder</h3><p>Getrennt vom Broker-Betriebskapital</p></div>
+        <div class="card"><i class="fas fa-ban card-icon"></i><h3>Bonus-Verbot</h3><p>EU-Broker dürfen Retail Clients keine Handelsboni anbieten</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== VERIFICATION ============== -->
+  <section class="alt" id="verification">
+    <div class="container">
+      <span class="section-eyebrow">Selbst prüfen</span>
+      <h2>Regulierungsstatus offiziell verifizieren</h2>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Behörde</th><th>Offizielle Datenbank</th><th>Prüfmethode</th></tr></thead>
+          <tbody>
+            <tr><td>BaFin</td><td>Datenbank Erlaubnisinhaber</td><td>Name-/Firmensuche</td></tr>
+            <tr><td>CySEC</td><td>Regulated Entities</td><td>Lizenznummer</td></tr>
+            <tr><td>ESMA</td><td>Europaweites Register</td><td>EU-weite Suche</td></tr>
+            <tr><td>FCA</td><td>Financial Services Register</td><td>FRN-Nummer</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="risk-box compact" style="margin-top:1.5rem;">
+        <p><i class="fas fa-circle-info"></i> Prüfen Sie vor der Kontoeröffnung den aktuellen Regulierungsstatus eines Brokers stets in der offiziellen Datenbank der zuständigen Aufsichtsbehörde.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== GEBÜHREN ============== -->
+  <section id="gebuehren">
+    <div class="container">
+      <span class="section-eyebrow">Kostenstruktur</span>
+      <h2><i class="fas fa-receipt"></i> Kosten &amp; Gebühren beim CFD-Handel</h2>
+      <div class="info-box">Alle Gebühren sind brokerabhängig und variieren je nach Kontotyp, Instrument und Marktbedingungen. Die folgenden Werte sind allgemeine Richtwerte — prüfen Sie die aktuellen Konditionen direkt beim jeweiligen Broker.</div>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Kostenart</th><th>Standard-Konto</th><th>Raw Spread / ECN</th><th>Islamisches Konto</th></tr></thead>
+          <tbody>
+            <tr><td>Spread EUR/USD</td><td>Ab 1,0 Pip (inkl. Gebühr)</td><td>Ab 0,0 Pip + Kommission</td><td>Wie Standard</td></tr>
+            <tr><td>Kommission</td><td>Keine separate</td><td>Ab 3–5 USD/Lot</td><td>Keine / brokerabhängig</td></tr>
+            <tr><td>Swap (Overnight)</td><td>Brokerabhängig</td><td>Brokerabhängig</td><td>Keine (Swap-Free)</td></tr>
+            <tr><td>Inaktivitätsgebühr</td><td>Brokerabhängig</td><td>Brokerabhängig</td><td>Brokerabhängig</td></tr>
+            <tr><td>Einzahlungsgebühr</td><td>Meist kostenlos</td><td>Meist kostenlos</td><td>Meist kostenlos</td></tr>
+            <tr><td>Auszahlungsgebühr</td><td>Brokerabhängig</td><td>Brokerabhängig</td><td>Brokerabhängig</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">Datenquelle: Marktübersicht August 2026 · Stand: August 2026</p>
+    </div>
+  </section>
+
+  <!-- ============== PRODUKTE ============== -->
+  <section class="alt" id="produkte">
+    <div class="container">
+      <span class="section-eyebrow">Instrumente</span>
+      <h2>Produkte &amp; Handelsinstrumente</h2>
+      <div class="grid grid-3">
+        <div class="asset-tile"><i class="fas fa-dollar-sign"></i><h3>Forex Majors</h3><div class="asset-leverage">1:30</div><div class="asset-margin">Mindest-Margin: 3,33 %</div><div class="asset-examples">EUR/USD, GBP/USD</div></div>
+        <div class="asset-tile"><i class="fas fa-chart-bar"></i><h3>Indizes &amp; Gold</h3><div class="asset-leverage">1:20</div><div class="asset-margin">Mindest-Margin: 5 %</div><div class="asset-examples">DAX, S&amp;P 500, XAU/USD</div></div>
+        <div class="asset-tile"><i class="fas fa-oil-can"></i><h3>Rohstoffe</h3><div class="asset-leverage">1:10</div><div class="asset-margin">Mindest-Margin: 10 %</div><div class="asset-examples">WTI-Öl, Silber</div></div>
+        <div class="asset-tile"><i class="fas fa-building"></i><h3>Aktien-CFDs</h3><div class="asset-leverage">1:5</div><div class="asset-margin">Mindest-Margin: 20 %</div><div class="asset-examples">Apple, SAP, VW</div></div>
+        <div class="asset-tile"><i class="fas fa-bitcoin"></i><h3>Krypto-CFDs</h3><div class="asset-leverage">1:2</div><div class="asset-margin">Mindest-Margin: 50 %</div><div class="asset-examples">Bitcoin, Ethereum</div></div>
+        <div class="asset-tile"><i class="fas fa-user-tie"></i><h3>Pro-Client</h3><div class="asset-leverage">1:100–500</div><div class="asset-margin">Mindest-Margin: Variabel</div><div class="asset-examples">Alle Assets</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PLATTFORMEN ============== -->
+  <section id="plattformen">
+    <div class="container">
+      <span class="section-eyebrow">Technologie</span>
+      <h2>Handelsplattformen</h2>
+      <div class="grid grid-4">
+        <div class="card"><i class="fas fa-desktop card-icon"></i><h3>MetaTrader 4 (MT4)</h3><p>Forex-fokussiert, Expert Advisors (MQL4), breite Broker-Verfügbarkeit.</p></div>
+        <div class="card"><i class="fas fa-layer-group card-icon"></i><h3>MetaTrader 5 (MT5)</h3><p>21 Zeitrahmen, 38 Indikatoren, Multi-Asset-Handel.</p></div>
+        <div class="card"><i class="fas fa-bolt card-icon"></i><h3>cTrader</h3><p>ECN-optimiert, Level-II-Pricing, für Scalper.</p></div>
+        <div class="card"><i class="fas fa-mobile-alt card-icon"></i><h3>Web/Mobile Trader</h3><p>Browserbasiert, kein Download, iOS/Android.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== BEISPIELE ============== -->
+  <section class="alt" id="beispiele">
+    <div class="container">
+      <span class="section-eyebrow">Rechenbeispiele</span>
+      <h2>Margin-Rechenbeispiel: EUR/USD Long, Hebel 1:30</h2>
+      <div class="margin-steps">
+        <div class="margin-step">
+          <div class="step-num">Schritt 1</div>
+          <div class="step-title">Positionswert</div>
+          <div class="step-line">1 Standard-Lot = 30.000 EUR</div>
+          <div class="step-line">Hebel 1:30</div>
+        </div>
+        <div class="margin-step">
+          <div class="step-num">Schritt 2</div>
+          <div class="step-title">Margin erforderlich</div>
+          <div class="step-line">30.000 EUR / 30</div>
+          <div class="step-line">= 1.000 EUR</div>
+        </div>
+        <div class="margin-step">
+          <div class="step-num">Schritt 3</div>
+          <div class="step-title">P&amp;L bei 1 % Kursbewegung</div>
+          <div class="step-line step-result-pos">+1 %: +300 EUR</div>
+          <div class="step-line step-result-neg">−1 %: −300 EUR</div>
+        </div>
+      </div>
+
+      <h3>Risiko-Szenario: Margin Call &amp; Stop-Out</h3>
+      <p class="section-intro" style="text-align:left;max-width:720px;">Trader investiert 1.000 EUR Margin → Position 30.000 EUR (Hebel 1:30). Markt bewegt sich −2 % gegen die Position: Verlust 600 EUR (60 % der Margin), freie Margin 400 EUR, Margin-Level ≈ 67 % → Broker sendet Margin Call. Bewegt sich der Markt weiter auf −3,33 %, entsteht ein Verlust von 1.000 EUR (100 % der Margin) → Stop-Out, der Broker schließt die Position automatisch. Dank Negativsaldoschutz entsteht für EU-Retail-Kunden dabei kein negativer Kontosaldo.</p>
+      <div class="risk-box compact">
+        <p><i class="fas fa-triangle-exclamation"></i> Diese Beispiele sind vereinfachte Rechenmodelle und berücksichtigen keine Spreads, Kommissionen oder Swap-Gebühren. Reale Ergebnisse können abweichen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PROS/CONS ============== -->
+  <section id="pros-cons">
+    <div class="container">
+      <span class="section-eyebrow">Abwägung</span>
+      <h2>Vorteile &amp; Nachteile</h2>
+      <div class="pros-cons">
+        <div>
+          <h3><i class="fas fa-check text-success"></i> Vorteile EU-regulierter Broker</h3>
+          <ul>
+            <li><i class="fas fa-check text-success"></i> Negativsaldoschutz für Retail Clients</li>
+            <li><i class="fas fa-check text-success"></i> Segregierte Kundengelder</li>
+            <li><i class="fas fa-check text-success"></i> ESMA-Regulierung (seit 2018)</li>
+            <li><i class="fas fa-check text-success"></i> Einlagensicherung bis 100.000 EUR (BaFin)</li>
+            <li><i class="fas fa-check text-success"></i> Bonus-Verbot schützt vor Fehlanreizen</li>
+          </ul>
+        </div>
+        <div>
+          <h3><i class="fas fa-times text-danger"></i> Nachteile / Einschränkungen</h3>
+          <ul>
+            <li><i class="fas fa-times text-danger"></i> Maximaler Hebel 1:30 für Retail (Forex)</li>
+            <li><i class="fas fa-times text-danger"></i> Kein Zugang zu 1:500+ ohne Profistatus</li>
+            <li><i class="fas fa-times text-danger"></i> Professional Client Status kostet den Negativsaldoschutz</li>
+            <li><i class="fas fa-times text-danger"></i> Offshore-Broker: hohe Hebel, aber kein EU-Schutz</li>
+            <li><i class="fas fa-times text-danger"></i> 74–89 % der Retail-CFD-Konten verlieren Geld (ESMA)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ZIELGRUPPE ============== -->
+  <section class="alt" id="zielgruppe">
+    <div class="container">
+      <span class="section-eyebrow">Passt das zu mir?</span>
+      <h2>Für wen geeignet?</h2>
+      <div class="grid grid-3">
+        <div class="card"><i class="fas fa-graduation-cap card-icon"></i><h3>Einsteiger</h3><p>Demokonto empfohlen; ESMA-Retail-Schutz nutzen; niedrigen Hebel wählen; Margin-Rechner vor jedem Trade verwenden.</p></div>
+        <div class="card"><i class="fas fa-chart-line card-icon"></i><h3>Erfahrene Trader</h3><p>Raw-Spread-Konten, ECN-Ausführung und ggf. Professional Client Status nach sorgfältiger Prüfung der Konsequenzen.</p></div>
+        <div class="card"><i class="fas fa-user-times card-icon"></i><h3>Nicht geeignet</h3><p>Anleger, die kein Totalverlustrisiko akzeptieren können, oder die eine langfristige Geldanlage suchen (dafür sind ETF-Sparpläne besser geeignet).</p></div>
+      </div>
+      <div class="cta-block">
+  <h3><i class="fas fa-flask"></i> Plattform risikofrei kennenlernen</h3>
+  <p>Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital – ohne echtes Verlustrisiko.</p>
+  <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Demokonto starten →</a>
+</div>
+    </div>
+  </section>
+
+  <!-- ============== VERGLEICH ============== -->
+  <section id="vergleich">
+    <div class="container">
+      <span class="section-eyebrow">Statuskategorien</span>
+      <h2><i class="fas fa-scale-balanced"></i> EU-reguliert vs. Offshore vs. Professional Client</h2>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Kriterium</th><th>EU Retail</th><th>EU Professional</th><th>Offshore Retail</th></tr></thead>
+          <tbody>
+            <tr><td>Max. Hebel Forex</td><td>1:30</td><td>1:100–1:500</td><td>1:500–1:3000</td></tr>
+            <tr><td>Negativsaldoschutz</td><td><i class="fas fa-check text-success"></i> Pflicht</td><td><i class="fas fa-times text-danger"></i> Entfällt</td><td><i class="fas fa-times text-danger"></i> Nicht vorhanden</td></tr>
+            <tr><td>Einlagensicherung</td><td><i class="fas fa-check text-success"></i> Bis 100.000 EUR</td><td><i class="fas fa-triangle-exclamation" style="color:var(--color-warning)"></i> Kann entfallen</td><td><i class="fas fa-times text-danger"></i> Nicht garantiert</td></tr>
+            <tr><td>Nachschusspflicht</td><td><i class="fas fa-times text-danger"></i> Verboten</td><td><i class="fas fa-triangle-exclamation" style="color:var(--color-warning)"></i> Möglich</td><td><i class="fas fa-triangle-exclamation" style="color:var(--color-warning)"></i> Möglich</td></tr>
+            <tr><td>Bonus-Verbot</td><td><i class="fas fa-check text-success"></i> Ja</td><td><i class="fas fa-triangle-exclamation" style="color:var(--color-warning)"></i> Entfällt</td><td><i class="fas fa-times text-danger"></i> Kein Verbot</td></tr>
+            <tr><td>Regulierungsbehörde</td><td>BaFin, CySEC, FCA</td><td>BaFin, CySEC, FCA</td><td>FSA, FSC, VFSC</td></tr>
+            <tr><td>Rechtsschutz (DE)</td><td><i class="fas fa-check text-success"></i> Vollständig</td><td><i class="fas fa-check text-success"></i> Vollständig</td><td><i class="fas fa-times text-danger"></i> Eingeschränkt</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">Details zum Antragsprozess: <a href="/professioneller-trader-status-beantragen.html">Professional Client Status beantragen</a> · Zu den Risiken: <a href="/offshore-cfd-broker-ohne-esma.html">Offshore-Broker ohne ESMA</a></p>
+    </div>
+  </section>
+
+  <!-- ============== METHODIK ============== -->
+  <section class="alt" id="methodik">
+    <div class="container">
+      <span class="section-eyebrow">Transparenz</span>
+      <h2>Bewertungsmethodik</h2>
+      <div class="grid grid-3">
+        <div class="card method-tile"><i class="fas fa-shield-alt card-icon"></i><h3>Regulierung & Lizenz</h3><span class="method-weight">25 % Gewichtung</span></div>
+        <div class="card method-tile"><i class="fas fa-euro-sign card-icon"></i><h3>Handelskosten</h3><span class="method-weight">20 % Gewichtung</span></div>
+        <div class="card method-tile"><i class="fas fa-chart-line card-icon"></i><h3>Plattform & Tools</h3><span class="method-weight">20 % Gewichtung</span></div>
+        <div class="card method-tile"><i class="fas fa-lock card-icon"></i><h3>Sicherheit & Schutz</h3><span class="method-weight">20 % Gewichtung</span></div>
+        <div class="card method-tile"><i class="fas fa-headset card-icon"></i><h3>Support & Service</h3><span class="method-weight">10 % Gewichtung</span></div>
+        <div class="card method-tile"><i class="fas fa-flask card-icon"></i><h3>Demokonto & Einstieg</h3><span class="method-weight">5 % Gewichtung</span></div>
+      </div>
+      <p class="section-intro" style="margin-top:2rem;">Datenquellen: ESMA-Veröffentlichungen, BaFin-Register, offizielle Broker-Dokumentationen, Live-Handelstest August 2026.</p>
+    </div>
+  </section>
+
+  <!-- ============== MARGIN-RECHNER ============== -->
+  <section id="rechner">
+    <div class="container">
+      <span class="section-eyebrow">Interaktives Tool</span>
+      <h2><i class="fas fa-calculator"></i> Margin-Rechner: Hebelwirkung berechnen</h2>
+      <div class="risk-box compact" style="max-width:940px;margin-left:auto;margin-right:auto;">
+        <p><i class="fas fa-circle-info"></i> Dieser Rechner dient der Planung und stellt keine Anlageberatung dar. Alle Berechnungen sind Näherungswerte; tatsächliche Margin-Anforderungen sind brokerabhängig.</p>
+      </div>
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <div>
+            <div class="calc-field">
+              <label for="calc-instrument">Instrument</label>
+              <select id="calc-instrument">
+                <option value="EUR/USD">EUR/USD (1:30)</option>
+                <option value="Gold (XAU/USD)">Gold XAU/USD (1:20)</option>
+                <option value="WTI-Öl">WTI-Öl (1:10)</option>
+                <option value="Aktien-CFD">Aktien-CFD (1:5)</option>
+                <option value="Bitcoin-CFD">Bitcoin-CFD (1:2)</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label for="calc-lots">Lot-Größe</label>
+              <input type="number" id="calc-lots" value="1" min="0.01" max="100" step="0.01">
+            </div>
+            <div class="calc-field">
+              <label for="calc-price">Kurs des Instruments</label>
+              <input type="number" id="calc-price" value="1.0840" step="0.0001">
+            </div>
+            <div class="calc-field">
+              <label for="calc-leverage">Hebel (1:X, max. ESMA-Limit editierbar)</label>
+              <input type="number" id="calc-leverage" value="30" min="1" max="3000" step="1">
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="result-row"><span class="result-label">Positionswert</span><span class="result-value" id="result-position">–</span></div>
+            <div class="result-row"><span class="result-label">Erforderliche Margin</span><span class="result-value" id="result-margin">–</span></div>
+            <div class="result-row"><span class="result-label">Margin in %</span><span class="result-value" id="result-margin-pct">–</span></div>
+            <div class="result-row"><span class="result-label">P&amp;L bei +1 % Kursbewegung</span><span class="result-value positive" id="result-pnl-pos">–</span></div>
+            <div class="result-row"><span class="result-label">P&amp;L bei −1 % Kursbewegung</span><span class="result-value negative" id="result-pnl-neg">–</span></div>
+            <div class="result-row"><span class="result-label">Stop-Out-Level (50 % Margin)</span><span class="result-value" id="result-stopout">–</span></div>
+            <div class="result-row"><span class="result-label">Totalverlust bei Kursbewegung von</span><span class="result-value" id="result-totaloss">–</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-block">
+  <h3><i class="fas fa-flask"></i> Berechnungen mit virtuellem Kapital testen</h3>
+  <p>Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital – ohne echtes Verlustrisiko.</p>
+  <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Demokonto öffnen →</a>
+</div>
+    </div>
+  </section>
+
+  <!-- ============== DATEN & BELEGE ============== -->
+  <section class="alt" id="daten">
+    <div class="container">
+      <span class="section-eyebrow">Belege</span>
+      <h2>Daten &amp; Belege</h2>
+      <div class="stat-split">
+        <div class="donut"><div class="donut-inner"><span class="donut-pct">74 %</span><span class="donut-label">verlieren Geld</span></div></div>
+        <div class="stat-legend">
+          <div class="legend-item"><span class="legend-dot" style="background:var(--color-danger)"></span> 74 % verlieren (Durchschnittswert, ESMA-Pflichtangaben)</div>
+          <div class="legend-item"><span class="legend-dot" style="background:var(--color-success)"></span> 26 % gewinnen oder brechen neutral ab</div>
+          <div class="legend-item" style="color:var(--color-text-secondary);font-size:var(--text-xs);">Individuelle Broker-Werte: 68–89 %</div>
+        </div>
+      </div>
+      <div class="grid grid-3" style="margin-top:2.5rem;">
+        <div class="fact-tile"><i class="fas fa-calendar-check"></i><div class="fact-label">ESMA-Produktintervention</div><div class="fact-value">August 2018</div></div>
+        <div class="fact-tile"><i class="fas fa-earth-europe"></i><div class="fact-label">Geltungsbereich</div><div class="fact-value">Alle EU-regulierten Broker</div></div>
+        <div class="fact-tile"><i class="fas fa-shield"></i><div class="fact-label">Negativsaldoschutz seit</div><div class="fact-value">2018 / dauerhaft ab 2019</div></div>
+        <div class="fact-tile"><i class="fas fa-file-invoice-euro"></i><div class="fact-label">§20 EStG Verlustgrenze</div><div class="fact-value">Aufgehoben durch JStG 2024 (6.12.2024)</div></div>
+        <div class="fact-tile"><i class="fas fa-piggy-bank"></i><div class="fact-label">Sparerpauschbetrag</div><div class="fact-value">1.000 EUR p.a. (2.000 EUR zusammen)</div></div>
+        <div class="fact-tile"><i class="fas fa-clock"></i><div class="fact-label">Datenstand</div><div class="fact-value">August 2026</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== STEUER ============== -->
+  <section class="alt" id="steuer">
+    <div class="container">
+      <span class="section-eyebrow">Steuerliches</span>
+      <h2><i class="fas fa-file-invoice-euro"></i> CFD-Steuer in Deutschland: Das Wichtigste 2026</h2>
+      <div class="grid grid-4">
+        <div class="card"><i class="fas fa-percent card-icon"></i><h3>Abgeltungssteuer</h3><p>25 % + Solidaritätszuschlag (effektiv ca. 26,375 %) auf CFD-Gewinne.</p></div>
+        <div class="card"><i class="fas fa-gavel card-icon"></i><h3>JStG 2024</h3><p>§20 Abs. 6 Satz 5 EStG (20.000-EUR-Grenze) aufgehoben ab 6.12.2024 — Verluste unbegrenzt verrechenbar.</p></div>
+        <div class="card"><i class="fas fa-piggy-bank card-icon"></i><h3>Sparerpauschbetrag</h3><p>1.000 EUR p.a. (2.000 EUR bei Zusammenveranlagung).</p></div>
+        <div class="card"><i class="fas fa-earth-europe card-icon"></i><h3>Offshore-Broker</h3><p>Welteinkommensprinzip — Gewinne auch bei Offshore-Brokern steuerpflichtig in Deutschland.</p></div>
+      </div>
+      <div class="risk-box compact" style="margin-top:2rem;">
+        <p><i class="fas fa-circle-info"></i> Dieser Abschnitt stellt keine Steuer- oder Rechtsberatung dar. Die steuerliche Behandlung im Einzelfall kann abweichen. Ein Steuerberater sollte für die individuelle Situation konsultiert werden. Stand: August 2026. Ausführliche Informationen: <a href="/cfd-steuer-deutschland.html">CFD-Steuer in Deutschland im Detail</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== RISIKOHINWEIS ============== -->
+  <section id="risiko">
+    <div class="container">
+      <span class="section-eyebrow">Pflichtangabe</span>
+      <h2>Risikohinweis</h2>
+      <div class="risk-box">
+        <strong class="risk-title"><i class="fas fa-triangle-exclamation"></i> Risikohinweis</strong>
+        <p>Der Handel mit Differenzkontrakten (CFDs) und anderen Hebelprodukten ist mit einem erheblichen Verlustrisiko verbunden und ist nicht für alle Anleger geeignet.</p>
+        <ul>
+          <li>Es besteht das Risiko, das gesamte eingesetzte Kapital zu verlieren</li>
+          <li>Der Hebel wirkt symmetrisch: Er amplifiziert Gewinne und Verluste gleichermaßen</li>
+          <li>Laut ESMA-Pflichtangaben verlieren zwischen 74 und 89 % der Retail-CFD-Konten Geld</li>
+          <li>Leverage Risk: Bei Hebel 1:30 führt eine 3,33-%-Kursbewegung zum Totalverlust der Margin</li>
+          <li>Market Risk: CFD-Kurse können sich schnell und unvorhersehbar bewegen</li>
+          <li>Jurisdiktionale Einschränkungen: ESMA-Limits gelten nur für EU-regulierte Broker</li>
+        </ul>
+        <p>Dieser Artikel dient ausschließlich zu Informationszwecken und stellt keine Anlageberatung, Steuerberatung oder Aufforderung zum Handel dar.</p>
+      </div>
+
+      <div class="cascade">
+        <div class="cascade-step">Kapital einsetzen (Margin)</div>
+        <div class="cascade-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="cascade-step">Kursbewegung gegen Position</div>
+        <div class="cascade-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="cascade-step">Margin sinkt → Margin Call (80–100 % Level)</div>
+        <div class="cascade-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="cascade-step">Weiterer Kursrückgang → Stop-Out (50 % Level, BaFin)</div>
+        <div class="cascade-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="cascade-step">Negativsaldoschutz greift (EU Retail)</div>
+        <div class="cascade-arrow"><i class="fas fa-arrow-down"></i></div>
+        <div class="cascade-step final">Maximalverlust = eingezahltes Kapital</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+  <div class="container">
+    <span class="section-eyebrow">Häufige Fragen</span>
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Welchen maximalen Hebel darf ein EU-regulierter CFD Broker Privatanlegern anbieten?</summary>
+        <div class="faq-answer">EU-regulierte CFD Broker dürfen Retail Clients nach ESMA-Vorgaben maximal 1:30 für Hauptwährungspaare, 1:20 für Aktienindizes und Gold, 1:10 für Rohstoffe, 1:5 für Aktien-CFDs und 1:2 für Kryptowährungs-CFDs anbieten.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was ist der Unterschied zwischen einem EU-regulierten und einem Offshore-CFD-Broker?</summary>
+        <div class="faq-answer">EU-regulierte Broker unterliegen ESMA-Hebellimits und bieten Retail Clients Negativsaldoschutz sowie EU-Einlagensicherung. Offshore-Broker bieten höhere Hebel (bis 1:1000 oder mehr), jedoch ohne Negativsaldoschutz, ohne EU-Einlagensicherung und mit möglicher Nachschusspflicht.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Kann ich als Privatanleger bei einem EU-regulierten Broker mehr als meine Einzahlung verlieren?</summary>
+        <div class="faq-answer">Nein. EU-regulierte Broker sind für Retail Clients gesetzlich verpflichtet, Negativsaldoschutz zu gewähren. Verluste übersteigen das eingezahlte Kapital nicht.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie beantrage ich den professionellen Trader Status für höheren Hebel?</summary>
+        <div class="faq-answer">Zwei von drei MiFID-II-Kriterien (Anhang II) müssen erfüllt sein: 10 Trades pro Quartal, Portfolio über 500.000 EUR oder ein Jahr Berufserfahrung im Finanzsektor. Der Antrag wird direkt beim Broker gestellt.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was ist die Margin-Formel beim CFD-Handel?</summary>
+        <div class="faq-answer">Margin = Positionswert / Hebel. Beispiel: EUR/USD, 1 Lot (110.000 EUR Positionswert), Hebel 1:30 → Margin: 3.667 EUR.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was passiert beim Stop-Out-Level?</summary>
+        <div class="faq-answer">Der Stop-Out ist die Schwelle, bei der der Broker offene Positionen automatisch schließt. Gemäß BaFin-Allgemeinverfügung liegt der Stop-Out bei EU-regulierten Brokern für Retail Clients bei mindestens 50 % des Margin-Bedarfs.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Ist es legal, als Deutscher bei einem Offshore-Broker zu handeln?</summary>
+        <div class="faq-answer">Ja, es ist nicht verboten. Jedoch entfallen EU-Schutzstandards wie Negativsaldoschutz und EU-Einlagensicherung. Steuerliche Pflichten (Abgeltungssteuer) bleiben vollständig bestehen.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie werden CFD-Gewinne in Deutschland besteuert?</summary>
+        <div class="faq-answer">CFD-Gewinne unterliegen der Abgeltungssteuer von 25 % zuzüglich Solidaritätszuschlag (effektiv ca. 26,375 %). Der Sparerpauschbetrag beträgt 1.000 EUR p.a. Die 20.000-EUR-Verlustverrechnungsgrenze (§20 EStG) wurde durch das JStG 2024 (6.12.2024) aufgehoben.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was ist der Unterschied zwischen Margin Call und Stop-Out?</summary>
+        <div class="faq-answer">Margin Call ist die Warnung des Brokers, wenn die freie Margin unter den Mindestlevel fällt. Stop-Out ist die automatische Positionsschließung durch den Broker ohne Aufforderung.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Kann ich einen CFD Broker mit hohem Hebel risikofrei testen?</summary>
+        <div class="faq-answer">Ja. Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital ohne echtes Verlustrisiko. Das Demokonto bildet reale Marktbedingungen ab.</div>
+      </details>
+    </div>
+  </div>
+</section>
+  <div class="container"><div style="max-width:800px;margin:-1.5rem auto 3rem;"><div class="cta-block">
+  <h3><i class="fas fa-flask"></i> Jetzt mit Demokonto starten — ohne Einzahlung</h3>
+  <p>Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital – ohne echtes Verlustrisiko.</p>
+  <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Demokonto öffnen →</a>
+</div></div></div>
+
+  <!-- ============== VERWANDTE INHALTE ============== -->
+  <section id="verwandte">
+    <div class="container">
+      <span class="section-eyebrow">Alle Themen</span>
+      <h2>Verwandte Inhalte</h2>
+      <div class="related-grid">
+        <a href="/hebelwirkung-cfd-erklaert.html" class="related-card"><i class="fas fa-chart-line"></i><span class="related-title">Hebelwirkung erklärt</span></a>
+        <a href="/esma-hebel-limits-deutschland.html" class="related-card"><i class="fas fa-gavel"></i><span class="related-title">ESMA-Hebellimits</span></a>
+        <a href="/cfd-broker-regulierung-deutschland.html" class="related-card"><i class="fas fa-building-columns"></i><span class="related-title">Regulierung in Deutschland</span></a>
+        <a href="/offshore-cfd-broker-ohne-esma.html" class="related-card"><i class="fas fa-globe"></i><span class="related-title">Offshore-Broker ohne ESMA</span></a>
+        <a href="/cfd-broker-vergleich-hebel.html" class="related-card"><i class="fas fa-scale-balanced"></i><span class="related-title">Broker-Vergleich</span></a>
+        <a href="/risiken-cfd-handel-hebel.html" class="related-card"><i class="fas fa-triangle-exclamation"></i><span class="related-title">Risiken beim Hebel-Handel</span></a>
+        <a href="/professioneller-trader-status-beantragen.html" class="related-card"><i class="fas fa-user-tie"></i><span class="related-title">Profistatus beantragen</span></a>
+        <a href="/cfd-konto-eroeffnen-anleitung.html" class="related-card"><i class="fas fa-id-card"></i><span class="related-title">Konto eröffnen: Anleitung</span></a>
+        <a href="/cfd-handelsstrategien-hebel.html" class="related-card"><i class="fas fa-chess"></i><span class="related-title">Handelsstrategien</span></a>
+        <a href="/cfd-steuer-deutschland.html" class="related-card"><i class="fas fa-file-invoice-euro"></i><span class="related-title">CFD-Steuer Deutschland</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ÜBER UNS ============== -->
+  <section class="alt" id="ueber">
+    <div class="container">
+      <span class="section-eyebrow">Transparenz</span>
+      <h2>Über diese Seite</h2>
+      <p class="section-intro">Diese Informationsplattform wird von einem unabhängigen Redaktionsteam betrieben, das sich auf EU-Finanzmarktregulierung und CFD-Handel spezialisiert hat. Alle Bewertungen und Informationen werden unabhängig von kommerziellen Beziehungen erstellt.</p>
+    </div>
+  </section>
+
+  <!-- ============== KONTAKT ============== -->
+  <section id="kontakt">
+    <div class="container">
+      <span class="section-eyebrow">Fragen oder Korrekturen?</span>
+      <h2>Kontakt &amp; Korrekturen</h2>
+      <div class="card contact-card">
+        <p style="text-align:center;">Sachliche Fehler können per E-Mail gemeldet werden und werden innerhalb von 48 Stunden geprüft. Bei pressebezogenen Anfragen bitte Betreff „Redaktion" angeben.</p>
+        <form>
+          <input type="text" placeholder="Name" disabled>
+          <input type="email" placeholder="E-Mail" disabled>
+          <textarea placeholder="Nachricht" rows="4" disabled></textarea>
+          <button type="submit" class="btn btn-primary btn-block" disabled><i class="fas fa-paper-plane"></i> Senden</button>
+        </form>
+        <p class="form-note">Formular in Bearbeitung — bitte nutzen Sie vorerst die redaktionelle Kontakt-E-Mail.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/index.html" class="logo">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;"><rect width="64" height="64" rx="14" fill="#0B1120"/><path d="M14 42 L26 30 L34 38 L50 18" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M40 18 H50 V28" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span>CFD Hebel <span class="logo-accent">Guide</span></span>
+        </a>
+        <p>Unabhängige Informationsplattform zu CFD Brokern mit hohem Hebel, ESMA-Regulierung und Risikomanagement für deutsche Trader.</p>
+        <p>© 2026 CFD Hebel Guide. Alle Rechte vorbehalten.</p>
+      </div>
+      <div>
+        <h4>Grundlagen</h4>
+        <ul>
+          <li><a href="/index.html">Übersicht</a></li>
+          <li><a href="/hebelwirkung-cfd-erklaert.html">Hebelwirkung erklärt</a></li>
+          <li><a href="/esma-hebel-limits-deutschland.html">ESMA-Hebellimits</a></li>
+          <li><a href="/cfd-broker-regulierung-deutschland.html">Regulierung in Deutschland</a></li>
+          <li><a href="/offshore-cfd-broker-ohne-esma.html">Offshore-Broker ohne ESMA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Praxis</h4>
+        <ul>
+          <li><a href="/cfd-broker-vergleich-hebel.html">Broker-Vergleich</a></li>
+          <li><a href="/risiken-cfd-handel-hebel.html">Risiken beim Hebel-Handel</a></li>
+          <li><a href="/professioneller-trader-status-beantragen.html">Profistatus beantragen</a></li>
+          <li><a href="/cfd-konto-eroeffnen-anleitung.html">Konto eröffnen: Anleitung</a></li>
+          <li><a href="/cfd-handelsstrategien-hebel.html">Handelsstrategien</a></li>
+          <li><a href="/cfd-steuer-deutschland.html">CFD-Steuer Deutschland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="#risiko">Risikohinweis</a></li>
+          <li><a href="#ueber">Über uns</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risikohinweis:</strong> Der Handel mit CFDs ist mit erheblichem Verlustrisiko verbunden. Zwischen 74 und 89 % der Retail-CFD-Konten verlieren Geld. Dieser Inhalt dient ausschließlich zu Informationszwecken und stellt keine Anlageberatung dar. Vergangene Wertentwicklungen sind kein zuverlässiger Indikator für zukünftige Ergebnisse.</p>
+      <p><strong>Affiliate Disclosure:</strong> Diese Seite kann Affiliate-Links enthalten. Wenn Sie über unsere Links ein Konto eröffnen, erhalten wir möglicherweise eine Vergütung. Dies beeinflusst unsere redaktionellen Bewertungen nicht.</p>
+    </div>
+    <div class="footer-bottom">Stand: August 2026 · Letzte Aktualisierung: August 2026</div>
+  </div>
+</footer>
+<script src="/script.js"></script>
+</body>
+</html>

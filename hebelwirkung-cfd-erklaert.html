@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebelwirkung beim CFD-Handel: Margin, Stop-Out & Tiered Leverage 2026</title>
+<meta name="description" content="Wie die Hebelwirkung beim CFD-Handel funktioniert: Margin-Formel, Margin Call, Stop-Out-Level (BaFin: 50 %) und Tiered Leverage – mit Rechenbeispielen.">
+<link rel="canonical" href="https://cfd-hebel-guide.de/hebelwirkung-cfd-erklaert.html"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CFD-Hebel-Guide",
+  "url": "https://cfd-hebel-guide.de/",
+  "description": "Unabhängige Informationsplattform zu CFD Brokern mit hohem Hebel, ESMA-Regulierung und Risiken für deutsche Trader.",
+  "inLanguage": "de",
+  "foundingDate": "2026",
+  "areaServed": "DE"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Hebelwirkung beim CFD-Handel erklärt: Leverage, Margin-Berechnung und Stop-Out-Level",
+  "url": "https://cfd-hebel-guide.de/hebelwirkung-cfd-erklaert",
+  "description": "Wie die Hebelwirkung beim CFD-Handel funktioniert: Margin-Formel, Margin Call, Stop-Out-Level (BaFin: 50 %) und Tiered Leverage – mit Rechenbeispielen.",
+  "inLanguage": "de",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "CFD-Hebel-Guide" },
+  "publisher": { "@type": "Organization", "name": "CFD-Hebel-Guide" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://cfd-hebel-guide.de/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "CFD Broker mit hohem Hebel", "item": "https://cfd-hebel-guide.de/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Hebelwirkung erklärt", "item": "undefined" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Margin Call und Stop-Out?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Margin Call ist eine Warnung des Brokers, wenn die freie Margin unter den Mindestlevel fällt; der Trader wird zur Nacheinzahlung aufgefordert. Stop-Out ist eine automatische Maßnahme: Der Broker schließt Positionen, wenn das Eigenkapital den Stop-Out-Level unterschreitet, ohne Aufforderung des Traders." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel Margin brauche ich für einen Standard-Lot EUR/USD mit Hebel 1:30?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ein Standard-Lot EUR/USD bei Kurs 1,10 hat einen Positionswert von 110.000 EUR. Margin: 110.000 / 30 = 3.667 EUR. Für einen Mini-Lot (0,1 Lot): 367 EUR." }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert bei einem Wochenend-Gap mit meiner gehebelten Position?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Stop-Loss-Orders werden beim nächsten verfügbaren Kurs nach Markteröffnung ausgeführt. Bei starkem Gap kann dieser Kurs schlechter als der geplante Stop-Loss sein. Bei EU-regulierten Brokern mit Retail-Status verhindert der Negativsaldoschutz ein negatives Kontoguthaben." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-msg"><i class="fas fa-triangle-exclamation"></i> Risikohinweis: 74–89 % der Retail-CFD-Konten verlieren Geld</div>
+    <div class="top-bar-links">
+      <a href="/index.html#regulierung">Regulierung</a>
+      <a href="/index.html#rechner">Margin-Rechner</a>
+      <a href="/index.html#faq">FAQ</a>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="/index.html" class="logo">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="14" fill="#0B1120"/><path d="M14 42 L26 30 L34 38 L50 18" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M40 18 H50 V28" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span>CFD Hebel <span class="logo-accent">Guide</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <nav class="main-nav">
+      <a href="/index.html">Übersicht</a>
+        <a href="/hebelwirkung-cfd-erklaert.html" class="active">Hebelwirkung</a>
+        <a href="/esma-hebel-limits-deutschland.html">ESMA-Limits</a>
+        <a href="/cfd-broker-regulierung-deutschland.html">Regulierung</a>
+        <a href="/risiken-cfd-handel-hebel.html">Risiken</a>
+        <a href="/index.html#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="/index.html#rechner" class="btn btn-secondary btn-sm hide-mobile"><i class="fas fa-calculator"></i> <span class="hide-mobile">Rechner</span></a>
+      <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><i class="fas fa-rocket"></i> Demokonto öffnen</a>
+    </div>
+  </div>
+</header>
+<nav class="breadcrumb-bar" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/index.html">Startseite</a></li>
+      <li><a href="/index.html">CFD Broker mit hohem Hebel</a></li>
+      <li aria-current="page">Hebelwirkung erklärt</li>
+    </ol>
+  </div>
+</nav>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge"><i class="fas fa-shield-halved"></i> ESMA-regulierter Bereich · Risikohinweis</span>
+      <h1>Hebelwirkung beim CFD-Handel erklärt: Leverage, Margin-Berechnung und Stop-Out-Level</h1>
+      <p class="lead" style="text-align:center;margin:0 auto;">Leverage vervielfacht den Positionswert im Verhältnis zur hinterlegten Margin – und wirkt symmetrisch auf Gewinne wie Verluste. Formeln, Stop-Out-Regeln und Praxisbeispiele im Überblick.</p>
+      <p class="meta-line">Zuletzt aktualisiert: August 2026 · Fact-checked</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container article-content">
+      <div class="risk-box compact">
+        <p><i class="fas fa-triangle-exclamation"></i> <strong>Risikohinweis:</strong> Der Handel mit gehebelten Finanzinstrumenten ist mit erheblichem Verlustrisiko verbunden. Es besteht das Risiko des Totalverlustes der Einlage. Dieser Artikel dient ausschließlich zu Informationszwecken.</p>
+      </div>
+
+      
+      <h2>Was bedeutet Hebelwirkung beim CFD-Handel?</h2>
+      <p>Die Hebelwirkung (Leverage) beim CFD-Handel bezeichnet das Verhältnis zwischen dem tatsächlichen Positionswert und der hinterlegten Margin (Sicherheitsleistung). Bei Hebel 1:30 kontrolliert ein Trader mit 1.000 EUR Margin eine Position von 30.000 EUR. Formel: Margin = Positionswert / Hebel. Unterschreitet das freie Kapital den Margin-Call-Level, wird der Trader zur Nacheinzahlung aufgefordert; bei Unterschreitung des Stop-Out-Levels schließt der Broker Positionen automatisch (BaFin-Mindest: 50 % des Margin-Bedarfs für EU-Retail-Broker).</p>
+
+      <h2>Margin-Berechnung Schritt für Schritt</h2>
+      <p>Formel: Margin = Positionswert / Hebel. Drei Beispiele: EUR/USD 1 Lot (110.000 EUR) / 30 = 3.667 EUR Margin; Gold 1 Lot (200.000 USD) / 20 = 10.000 USD Margin; Aktien-CFD 100 Stück (20.000 USD) / 5 = 4.000 USD Margin. Die Margin ist keine Gebühr; sie wird bei Schließung der Position (zuzüglich Gewinn oder abzüglich Verlust) freigegeben. Freie Margin = Eigenkapital minus genutzte Margin.</p>
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead><tr><th>Instrument</th><th>Positionswert</th><th>Hebel</th><th>Margin</th></tr></thead>
+          <tbody>
+          <tr><td>EUR/USD (1 Lot)</td><td>110.000 EUR</td><td>1:30</td><td>3.667 EUR</td></tr>
+          <tr><td>Gold XAU/USD (1 Lot)</td><td>200.000 USD</td><td>1:20</td><td>10.000 USD</td></tr>
+          <tr><td>Aktien-CFD (100 St.)</td><td>20.000 USD</td><td>1:5</td><td>4.000 USD</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption">Möchten Sie eigene Werte durchrechnen? Nutzen Sie den <a href="/index.html#rechner">Margin-Rechner auf der Startseite</a>.</p>
+
+      <h2>Freie Margin vs. genutzte Margin</h2>
+      <p>Die genutzte Margin ist die Summe aller Sicherheitsleistungen für offene Positionen. Die freie Margin ist das verbleibende Kapital für neue Positionen oder als Puffer gegen Verluste. Freie Margin = Eigenkapital minus genutzte Margin. Der Margin-Level (Eigenkapital / genutzte Margin × 100 %) wird in der Handelsplattform in Echtzeit angezeigt. Ein Margin-Level von 100 % bedeutet: kein freies Kapital mehr vorhanden.</p>
+
+      <h2>Margin Call und Stop-Out erklärt</h2>
+      <p>Margin Call ist das Signal des Brokers, dass das freie Kapital unter den Mindest-Margin-Level gesunken ist. Typische Broker setzen den Margin Call bei 80–100 % des Margin-Levels. Stop-Out ist die automatische Positionsschließung durch den Broker. Gemäß BaFin-Allgemeinverfügung liegt der Stop-Out für Retail Clients bei EU-Brokern bei mindestens 50 % des Margin-Bedarfs.</p>
+      <ol class="step-list">
+        <li>Eigenkapital sinkt durch Kursbewegungen gegen offene Positionen.</li>
+        <li>Margin-Level fällt auf den Margin-Call-Threshold; der Broker informiert den Trader.</li>
+        <li>Stop-Out-Level erreicht; der Broker schließt die verlustreichste offene Position automatisch.</li>
+      </ol>
+      <p>Das Wochenend-Gap-Risiko erhöht die Stop-Out-Gefahr: Kurssprünge über Wochenenden führen zu schlechterer Stop-Loss-Ausführung.</p>
+
+      <h2>Tiered Leverage</h2>
+      <p>Tiered Leverage (gestaffelter Hebel) bezeichnet die Praxis, bei der viele EU-regulierte Broker den maximalen Hebel nach Positionsgröße staffeln. Größere Positionen erhalten einen niedrigeren Hebel. Konkrete Werte sind brokerabhängig und im jeweiligen Handelsregelwerk dokumentiert. Dieses Prinzip soll das Risiko bei sehr großen Positionen begrenzen.</p>
+
+      <h2>Negativsaldoschutz in der EU</h2>
+      <p>Der Negativsaldoschutz (Negative Balance Protection) schützt Retail Clients bei EU-regulierten Brokern davor, mehr als das eingezahlte Kapital zu verlieren. Die ESMA-Produktinterventionsmaßnahmen (August 2018) haben diesen Schutz eingeführt; die BaFin setzt ihn dauerhaft um. Entsteht durch einen Marktgap ein Verlust über das Kontoguthaben hinaus, trägt der Broker die Differenz. Der Schutz entfällt bei Professional Clients (MiFID II) und Kunden von Offshore-Brokern.</p>
+
+      <h2>Hebelrechner nutzen</h2>
+      <p>Der <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer">libertex.com/de</a> Margin-Rechner unterstützt Trader bei der Berechnung von erforderlicher Margin und Positionswert. Der Rechner ist ein Planungswerkzeug; er gibt keine Auskunft über zukünftige Marktbewegungen. Das Demokonto ermöglicht das Testen von Margin-Berechnungen mit virtuellem Kapital ohne echtes Verlustrisiko.</p>
+  
+
+      <div class="cta-block">
+  <h3><i class="fas fa-flask"></i> Margin-Berechnungen ohne Risiko testen</h3>
+  <p>Ein Demokonto ermöglicht das Testen der Handelsplattform mit virtuellem Kapital – ohne echtes Verlustrisiko.</p>
+  <a href="https://libertex.com/de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Zum Demokonto →</a>
+</div>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+  <div class="container">
+    <span class="section-eyebrow">Häufige Fragen</span>
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Was ist der Unterschied zwischen Margin Call und Stop-Out?</summary>
+        <div class="faq-answer">Margin Call ist eine Warnung des Brokers, wenn die freie Margin unter den Mindestlevel fällt; der Trader wird zur Nacheinzahlung aufgefordert. Stop-Out ist eine automatische Maßnahme: Der Broker schließt Positionen, wenn das Eigenkapital den Stop-Out-Level unterschreitet, ohne Aufforderung des Traders.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Wie viel Margin brauche ich für einen Standard-Lot EUR/USD mit Hebel 1:30?</summary>
+        <div class="faq-answer">Ein Standard-Lot EUR/USD bei Kurs 1,10 hat einen Positionswert von 110.000 EUR. Margin: 110.000 / 30 = 3.667 EUR. Für einen Mini-Lot (0,1 Lot): 367 EUR.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Was passiert bei einem Wochenend-Gap mit meiner gehebelten Position?</summary>
+        <div class="faq-answer">Stop-Loss-Orders werden beim nächsten verfügbaren Kurs nach Markteröffnung ausgeführt. Bei starkem Gap kann dieser Kurs schlechter als der geplante Stop-Loss sein. Bei EU-regulierten Brokern mit Retail-Status verhindert der Negativsaldoschutz ein negatives Kontoguthaben.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+  <section>
+  <div class="container">
+    <span class="section-eyebrow">Weiterlesen</span>
+    <h2>Verwandte Inhalte</h2>
+    <div class="related-grid">
+      <a href="/esma-hebel-limits-deutschland.html" class="related-card"><i class="fas fa-gavel"></i><span class="related-title">ESMA-Hebellimits</span></a>
+      <a href="/risiken-cfd-handel-hebel.html" class="related-card"><i class="fas fa-triangle-exclamation"></i><span class="related-title">Risiken beim Hebel-Handel</span></a>
+      <a href="/cfd-konto-eroeffnen-anleitung.html" class="related-card"><i class="fas fa-id-card"></i><span class="related-title">Konto eröffnen: Anleitung</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/index.html" class="logo">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;"><rect width="64" height="64" rx="14" fill="#0B1120"/><path d="M14 42 L26 30 L34 38 L50 18" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M40 18 H50 V28" stroke="#E3A542" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span>CFD Hebel <span class="logo-accent">Guide</span></span>
+        </a>
+        <p>Unabhängige Informationsplattform zu CFD Brokern mit hohem Hebel, ESMA-Regulierung und Risikomanagement für deutsche Trader.</p>
+        <p>© 2026 CFD Hebel Guide. Alle Rechte vorbehalten.</p>
+      </div>
+      <div>
+        <h4>Grundlagen</h4>
+        <ul>
+          <li><a href="/index.html">Übersicht</a></li>
+          <li><a href="/hebelwirkung-cfd-erklaert.html">Hebelwirkung erklärt</a></li>
+          <li><a href="/esma-hebel-limits-deutschland.html">ESMA-Hebellimits</a></li>
+          <li><a href="/cfd-broker-regulierung-deutschland.html">Regulierung in Deutschland</a></li>
+          <li><a href="/offshore-cfd-broker-ohne-esma.html">Offshore-Broker ohne ESMA</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Praxis</h4>
+        <ul>
+          <li><a href="/cfd-broker-vergleich-hebel.html">Broker-Vergleich</a></li>
+          <li><a href="/risiken-cfd-handel-hebel.html">Risiken beim Hebel-Handel</a></li>
+          <li><a href="/professioneller-trader-status-beantragen.html">Profistatus beantragen</a></li>
+          <li><a href="/cfd-konto-eroeffnen-anleitung.html">Konto eröffnen: Anleitung</a></li>
+          <li><a href="/cfd-handelsstrategien-hebel.html">Handelsstrategien</a></li>
+          <li><a href="/cfd-steuer-deutschland.html">CFD-Steuer Deutschland</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="/index.html#risiko">Risikohinweis</a></li>
+          <li><a href="/index.html#ueber">Über uns</a></li>
+          <li><a href="/index.html#kontakt">Kontakt</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p><strong>Risikohinweis:</strong> Der Handel mit CFDs ist mit erheblichem Verlustrisiko verbunden. Zwischen 74 und 89 % der Retail-CFD-Konten verlieren Geld. Dieser Inhalt dient ausschließlich zu Informationszwecken und stellt keine Anlageberatung dar. Vergangene Wertentwicklungen sind kein zuverlässiger Indikator für zukünftige Ergebnisse.</p>
+      <p><strong>Affiliate Disclosure:</strong> Diese Seite kann Affiliate-Links enthalten. Wenn Sie über unsere Links ein Konto eröffnen, erhalten wir möglicherweise eine Vergütung. Dies beeinflusst unsere redaktionellen Bewertungen nicht.</p>
+    </div>
+    <div class="footer-bottom">Stand: August 2026 · Letzte Aktualisierung: August 2026</div>
+  </div>
+</footer>
+<script src="/script.js"></script>
+</body>
+</html>
